@@ -54,7 +54,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-BadBank application with front-end, back-end, and database. This project was created in my effort to learn how to build a complete 3-tier application and it will continue to grow as my knowledge of application development grows. It is designed to be an easy way to show off things I'm learning in my Master's Full Stack Development program. 
+BadBank application with front-end, back-end, and database. "Bad Bank" is a reference to the fact that this project was an unsecure application in it's earlier iteration, however, we will be using firebase authentication to create different levels of authorization for this iteration. This project was created in my effort to learn how to build a complete 3-tier application and it will continue to grow as my knowledge of application development grows. It is designed to be an easy way to show off things I'm learning in my Master's Full Stack Development program. 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 
