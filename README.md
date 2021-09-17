@@ -22,7 +22,8 @@
 </p>
 
 
-
+***BADBANK IS AN ONGOING PROJECT - APP INSTALLATION AND USAGE WILL CHANGE AS MORE FEATURES ARE INTEGRATED***
+<br />
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
@@ -50,7 +51,6 @@
 </details>
 
 
-***BADBANK IS AN ONGOING PROJECT - APP INSTALLATION AND USAGE WILL CHANGE AS MORE FEATURES ARE INTEGRATED***
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
