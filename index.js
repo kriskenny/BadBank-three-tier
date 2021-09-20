@@ -8,9 +8,18 @@ app.use(express.static('public'));
 app.use(cors());
 
 // create user account
-app.get('/account/create/:name/:email/:password', function (req, res) {
+app.get('/account/create/:name/:email/:password/:balance', function (req, res) {
     // else create user
-    dal.create(req.params.name,req.params.email,req.params.password).
+    dal.create(req.params.name,req.params.email,req.params.password,req.params.balance).
+        then((user) => {
+            console.log(user);
+            res.send(user);            
+        });    
+});
+
+// deposit into user account
+app.get('/account/deposit/:email/:balance', function (req, res) {
+    dal.deposit(req.params.email,req.params.balance).
         then((user) => {
             console.log(user);
             res.send(user);            
