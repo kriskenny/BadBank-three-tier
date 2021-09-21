@@ -25,39 +25,7 @@ function Card(props){
 }
   
 function CardForm(props) {
-    const [name, setName]         = React.useState('');
-    const [email, setEmail]       = React.useState('');
-    const [password, setPassword] = React.useState('');
-    const [amount, setAmount]     = React.useState(0);
-//    const ctx = React.useContext(UserContext);  
-
-/*     function handle(){
-      const user = ctx.users.find(element => element.email === email);
-      if (props.buttonName==="Deposit") {
-        user.balance = parseInt(user.balance) + parseInt(amount);
-        console.log(JSON.stringify(user));
-      }
-      if (props.buttonName==="Withdraw") {
-        user.balance = parseInt(user.balance) - parseInt(amount);
-        console.log(JSON.stringify(user));
-      }
-      if (props.buttonName==="Create Account") {
-        ctx.users.push({name,email,password,balance:0});
-        console.log(name,email,password,0);
-      }
-      
-    }   */
-
-    function handle() {
-      console.log(name,email,password);
-      const url = `/account/create/${name}/${email}/${password}`;
-      (async () => {
-          var res = await fetch(url);
-          var data = await res.json();
-          console.log(data);
-      })();
-//      props.setShow(false);
-    }
+    const ctx = React.useContext(UserContext);  
 
     return (
       <>
@@ -66,8 +34,7 @@ function CardForm(props) {
         <input type="input" 
           className="form-control" 
           placeholder="Enter name" 
-          value={name} 
-          onChange={e => setName(e.currentTarget.value)} /><br/>
+          onChange={e => ctx.name=e.currentTarget.value} /><br/>
       </div>
 
       <div className="email-field" style={{display: props.showEmail}}>
@@ -75,8 +42,7 @@ function CardForm(props) {
         <input type="input" 
           className="form-control" 
           placeholder="Enter email" 
-          value={email} 
-          onChange={e => setEmail(e.currentTarget.value)}/><br/>
+          onChange={e => ctx.email=e.currentTarget.value}/><br/>
       </div>
 
       <div className="password-field" style={{display: props.showPassword}}>
@@ -84,8 +50,7 @@ function CardForm(props) {
         <input type="password" 
           className="form-control" 
           placeholder="Enter password" 
-          value={password} 
-          onChange={e => setPassword(e.currentTarget.value)}/><br/>
+          onChange={e => ctx.password=e.currentTarget.value}/><br/>
       </div>
 
       <div className="amount-field" style={{display: props.showAmount}}>
@@ -93,14 +58,7 @@ function CardForm(props) {
         <input type="number" 
           className="form-control" 
           placeholder="Enter amount" 
-          value={amount} 
-          onChange={e => setAmount(e.currentTarget.value)}/><br/>
-      </div>
-      
-      <div className="submit-field" style={{display: props.showButton}}>
-        <button type={props.buttonType} 
-          className="btn btn-light"
-          onClick={handle}>{props.buttonName}</button>
+          onChange={e => ctx.balance=e.currentTarget.value}/><br/>
       </div>
       </>
     )

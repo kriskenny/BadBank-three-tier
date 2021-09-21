@@ -22,7 +22,7 @@ function create(name, email, password, balance){
     })
 }
 
-// deposit in account
+// deposit into database
 function deposit(email, balance) {
     return new Promise((resolve, reject) => {
         const collection = db.collection('users');        
@@ -32,6 +32,30 @@ function deposit(email, balance) {
                 {$inc: {"balance":balance}},
                 function(err, result) {err ? reject(err) : resolve(result);}
             )
+    });   
+}
+
+// withdraw from database
+function withdraw(email, balance) {
+    return new Promise((resolve, reject) => {
+        const collection = db.collection('users');        
+        balance = -parseInt(balance);
+        collection.updateOne(
+                {"email":email}, 
+                {$inc: {"balance":balance}},
+                function(err, result) {err ? reject(err) : resolve(result);}
+            )
+    });   
+}
+
+// find user account balance
+function balance(email) {
+    return new Promise((resolve, reject) => {
+        const collection = db.collection('users');        
+        collection.find({"email":email})
+            .toArray(function(err, docs) {
+                err ? reject(err) : resolve(docs);
+            }); 
     });   
 }
 
@@ -60,4 +84,4 @@ function all(){
 }
 
 
-module.exports = {create, all, deposit};
+module.exports = {create, all, deposit, withdraw, balance};

@@ -26,6 +26,24 @@ app.get('/account/deposit/:email/:balance', function (req, res) {
         });    
 });
 
+// withdraw from user account
+app.get('/account/withdraw/:email/:balance', function (req, res) {
+    dal.withdraw(req.params.email,req.params.balance).
+        then((user) => {
+            console.log(user);
+            res.send(user);            
+        });    
+});
+
+// user account balance
+app.get('/account/balance/:email', function (req, res) {
+    dal.balance(req.params.email).
+        then((user) => {
+            console.log(user);
+            res.send(user);            
+        });    
+});
+
 // all accounts
 app.get('/account/all', function (req, res) {
 
