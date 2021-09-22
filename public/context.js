@@ -29,6 +29,7 @@ function CardForm(props) {
 
     return (
       <>
+      <div style={{maxWidth: "18rem"}}>
       <div className="name-field" style={{display: props.showName}}>
         Name<br/>
         <input type="input" 
@@ -59,6 +60,7 @@ function CardForm(props) {
           className="form-control" 
           placeholder="Enter amount" 
           onChange={e => ctx.balance=e.currentTarget.value}/><br/>
+      </div>
       </div>
       </>
     )

@@ -2,7 +2,9 @@ function Login() {
     const ctx = React.useContext(UserContext); 
 
     function loginUser() {
-        console.log('No login functionality at this time');
+        console.log('Logged in!');
+        ctx.user = ctx.email;
+        console.log(ctx.user);
     }
 
     return (
