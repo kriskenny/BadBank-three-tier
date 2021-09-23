@@ -1,20 +1,29 @@
 function CreateAccount(props){
     const [show, setShow]     = React.useState(true);
+    const [status, setStatus] = React.useState('');
     const ctx = React.useContext(UserContext); 
 
     function addUser() {
         ctx.balance = '0';
-        console.log('Name: ' + ctx.name);
-        console.log('Email: ' + ctx.email);
-        console.log('Password: ' + ctx.password);
-        console.log('Balance: ' + ctx.balance);
-        const url = `/account/create/${ctx.name}/${ctx.email}/${ctx.password}/${ctx.balance}`;
+        const url = `/account/find/${ctx.email}`;
         (async () => {
             var res = await fetch(url);
             var data = await res.json();
             console.log(data);
+            ctx.user = true;
         })();
-        setShow(false);
+        if (ctx.user) {
+            const url = `/account/create/${ctx.name}/${ctx.email}/${ctx.password}/${ctx.balance}`;
+            (async () => {
+                var res = await fetch(url);
+                var data = await res.json();
+                console.log(data);
+            })();
+            setShow(false);
+        } else {
+            setStatus('User already exists with that email');
+            setTimeout(() => setStatus(''),3000);
+        }
     }
 
     return (
@@ -22,7 +31,7 @@ function CreateAccount(props){
             bgcolor="primary"
             header="Create Account"
             text=""
-            status=""
+            status={status}
             body={
                 <>
                 {show ? 

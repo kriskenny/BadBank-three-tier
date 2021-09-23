@@ -5,7 +5,7 @@ function Spa() {
         <div>
 
             {/*add our shared context*/}
-            <UserContext.Provider value={{user:'',name:'',email:'',password:'',balance:'0'}}>
+            <UserContext.Provider value={{user:'',auth:false,name:'',email:'',password:'',balance:'0'}}>
             {/*get our navbar from navbar.js*/}
             <NavBar/> 
 
