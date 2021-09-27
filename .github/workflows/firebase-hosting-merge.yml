@@ -12,10 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm ci && npm install
-      - run: node index.js
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BADBANK_FIREBASE }}'
           channelId: live
           projectId: badbank-firebase
+      - run: node index.js
