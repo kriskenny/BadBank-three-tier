@@ -5,25 +5,27 @@ function CreateAccount(props){
 
     function addUser() {
         ctx.balance = '0';
-        const url = `/account/find/${ctx.email}`;
-        (async () => {
-            var res = await fetch(url);
-            var data = await res.json();
+        fetch(`/account/find/${ctx.email}`)
+        .then(response => response.json())
+        .then(data => {
             console.log(data);
-            ctx.user = true;
-        })();
-        if (ctx.user) {
+            if (data.length===0) ctx.user = true;
+        })
+        .then(() => {
+        if (ctx.user===true) {
             const url = `/account/create/${ctx.name}/${ctx.email}/${ctx.password}/${ctx.balance}`;
             (async () => {
                 var res = await fetch(url);
                 var data = await res.json();
                 console.log(data);
             })();
+            ctx.user='';
             setShow(false);
         } else {
+            ctx.user='';
             setStatus('User already exists with that email');
             setTimeout(() => setStatus(''),3000);
-        }
+        }})
     }
 
     return (

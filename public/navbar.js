@@ -58,6 +58,7 @@ function NavBar(){
               <a className="nav-link" href="#/alldata/">AllData</a>
             </li>          
           </ul>
+          {/* display the logged in user */}
           <span className="navbar-text">
             {logged}
           </span>

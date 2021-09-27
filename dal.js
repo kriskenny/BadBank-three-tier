@@ -59,12 +59,28 @@ function balance(email) {
     });   
 }
 
+// find user with given email and password, returns an empty array if doesn't exist
+function login(email, password) {
+    return new Promise((resolve, reject) => {
+        const collection = db.collection('users');        
+        collection.find({
+            $and: [
+                {"email": {$eq: email}}, 
+                {"password": {$eq: password}}
+            ]
+        })
+        .toArray(function(err, docs) {
+            err ? reject(err) : resolve(docs);
+        }); 
+    });   
+}
+
 // find user account
 function find(email){
     return new Promise((resolve, reject) => {    
         const customers = db
             .collection('users')
-            .find({email: email})
+            .find({"email": email})
             .toArray(function(err, docs) {
                 err ? reject(err) : resolve(docs);
         });    
@@ -84,4 +100,4 @@ function all(){
 }
 
 
-module.exports = {create, all, deposit, withdraw, balance};
+module.exports = {create, all, deposit, withdraw, balance, login, find};
