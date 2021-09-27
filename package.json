@@ -4,7 +4,6 @@
   "description": "A bad bank app with frontend, backend, and database. My MIT Capstone project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" &&",
     "start": "node index.js"
   },
   "author": "joeclark3516@gmail.com",
