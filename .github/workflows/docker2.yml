@@ -27,6 +27,6 @@ jobs:
         id: vars
         run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
       - name: Build the tagged Docker image
-        run: docker build -t clarkjoey/BadBank-three-tier .
+        run: docker build -t clarkjoey/badbank-three-tier .
       - name: Push the tagged Docker image
-        run: docker push clarkjoey/BadBank-three-tier
+        run: docker push clarkjoey/badbank-three-tier
