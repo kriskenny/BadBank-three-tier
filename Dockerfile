@@ -9,11 +9,5 @@ COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install --production
 
 COPY . .
-##
-RUN rmp run build
-COPY entrypoint.sh /entrypoint.sh
-RUN ["chmod", "+x", "/entrypoint.sh"]
-ENTRYPOINT [ "/entrypoint.sh" ]
-EXPOSE 3000
-##
-CMD [ "npm", "start" ]
+
+CMD [ "node", "index.js" ]
