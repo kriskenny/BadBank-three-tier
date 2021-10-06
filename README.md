@@ -13,16 +13,16 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/clarkjoey/BadBank-three-tier">
+  <a href="https://badbank-docker-edvmxc3iaa-uw.a.run.app">
     <img width="343" alt="screenshot1" src="https://user-images.githubusercontent.com/76763085/131267832-4dd13342-2ba5-4bed-8487-e07b3508946a.png">
   </a>
-
+  <a href="https://badbank-docker-edvmxc3iaa-uw.a.run.app">
   <h3 align="center">"Bad Bank" Three-Tier Project</h3>
-
+  </a>
 </p>
 
 
-***BADBANK IS AN ONGOING PROJECT - APP INSTALLATION AND USAGE WILL CHANGE AS MORE FEATURES ARE INTEGRATED***
+***BADBANK IS AN ONGOING PROJECT - APP USAGE WILL CHANGE AS MORE FEATURES ARE INTEGRATED***
 <br />
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -54,7 +54,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-BadBank application with front-end, back-end, and database. "Bad Bank" is a reference to the fact that this project was an unsecure application in it's earlier iteration, however, we will be using firebase authentication to create different levels of authorization for this iteration. This project was created in my effort to learn how to build a complete 3-tier application and it will continue to grow as my knowledge of application development grows. It is designed to be an easy way to show off things I'm learning in my Master's Full Stack Development program. 
+"Bad Bank" is my MIT capstone application with a front-end, back-end, and database. The Bad Bank name refers to the project's earlier iteration where it was a banking application that was not secure (i.e. no login, no administrative privileges). However, we will be using firebase authentication and authorization to create different levels of authorization to turn "Bad Bank" into a more secure bank - a lot like what a really company might use. This project was created in my effort to learn how to build a complete 3-tier application and it will continue to grow as my knowledge of application development grows. It is also designed to be an easy way to show off things I've learned in my Master's Full Stack Development program. 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 
@@ -71,6 +71,10 @@ BadBank application with front-end, back-end, and database. "Bad Bank" is a refe
 <!-- GETTING STARTED -->
 ## Getting Started
 
+Bad Bank is hosted by google cloud services. You can navigate to the url below to see the most recent published version. To download and make edits to the code, see Prerequisites and Installation.
+
+View Bad Bank: https://badbank-docker-edvmxc3iaa-uw.a.run.app
+
 ### Prerequisites
 
 
@@ -81,7 +85,7 @@ BadBank application with front-end, back-end, and database. "Bad Bank" is a refe
 
 
 ### Installation
-***INSTALLATION REQUIREMENTS WILL CHANGE IN LATER VERSIONS***
+To edit and run locally on your machine
 
 1. Clone the repo
    ```sh
@@ -181,14 +185,14 @@ Project Link: [https://github.com/clarkjoey/create-fake-users](https://github.co
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/clarkjoey/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/clarkjoey/personal-website-frontend/graphs/contributors
+[contributors-url]: https://github.com/clarkjoey/BadBank-three-tier/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/clarkjoey/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/clarkjoey/personal-website-frontend/network/members
+[forks-url]: https://github.com/clarkjoey/BadBank-three-tier/network/members
 [stars-shield]: https://img.shields.io/github/stars/clarkjoey/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/clarkjoey/personal-website-frontend/stargazers
+[stars-url]: https://github.com/clarkjoey/BadBank-three-tier/stargazers
 [issues-shield]: https://img.shields.io/github/issues/clarkjoey/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/clarkjoey/personal-website-frontend/issues
+[issues-url]: https://github.com/clarkjoey/BadBank-three-tier/issues
 [license-shield]: https://img.shields.io/github/license/clarkjoey/repo.svg?style=for-the-badge
-[license-url]: https://github.com/clarkjoey/personal-website-frontend/blob/master/LICENSE.txt
+[license-url]: https://github.com/clarkjoey/BadBank-three-tier/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/imjosephclark/
